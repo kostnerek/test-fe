@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [data, setData] = useState(null)
-  const [apiBaseUrl, setApiBaseUrl] = useState(import.meta.env.VITE_API_BASE_URL)
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${apiBaseUrl}/hello`)
